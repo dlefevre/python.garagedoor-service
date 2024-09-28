@@ -1,0 +1,27 @@
+[project]
+name = "garagedoor-service"
+version = "0.1.0"
+description = "Default template for PDM package" 
+authors = [
+    {name = "Dusty Lefevre", email = "nobody@localhost"},
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = "==3.12.*"
+
+dependencies = [
+    "fastapi>=0.112.2",
+    "rpi-gpio>=0.7.1",
+]
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = "fastapi dev src/garagedoor_service/main.py"
+
+[tool.pdm.dev-dependencies]
+development = [
+    "fastapi[standard]>=0.112.2",
+]
