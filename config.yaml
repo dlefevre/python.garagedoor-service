@@ -1,0 +1,15 @@
+# Run mode, either development or production. Production will use the GPIO pins.
+mode: development
+
+# GPIO Pin config for toggling the motor and reading the magnetic sensors.
+gpio:
+  toggle_pin: 11
+  open_pin: 21
+  closed_pin: 22
+
+# bcrypt hashed api keys.
+# Use the following command to generate a new hash:
+#  $ htpasswd -nbBC 10 "" <password> | tr -d ':\n'
+api_keys:
+  # Digest for the api key "test"
+  - $2y$10$3lHF35DW58Cse5gtU9DBMukIcUkQNNclSk3SDLArd4g2/8xC12Qb2

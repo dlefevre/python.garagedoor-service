@@ -12,6 +12,7 @@ requires-python = "==3.12.*"
 dependencies = [
     "fastapi>=0.112.2",
     "rpi-gpio>=0.7.1",
+    "bcrypt>=4.2.0",
 ]
 
 
@@ -19,7 +20,7 @@ dependencies = [
 distribution = false
 
 [tool.pdm.scripts]
-dev = "fastapi dev garagedoor-service/main.py"
+dev = "fastapi dev garagedoor_service/main.py"
 
 [tool.pdm.dev-dependencies]
 development = [
