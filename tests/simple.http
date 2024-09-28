@@ -1,0 +1,2 @@
+# Simple test for root path
+GET http://localhost:8000/

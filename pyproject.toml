@@ -19,7 +19,7 @@ dependencies = [
 distribution = false
 
 [tool.pdm.scripts]
-dev = "fastapi dev src/garagedoor_service/main.py"
+dev = "fastapi dev garagedoor-service/main.py"
 
 [tool.pdm.dev-dependencies]
 development = [
