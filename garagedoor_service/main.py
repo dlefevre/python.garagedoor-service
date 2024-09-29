@@ -5,6 +5,8 @@ from fastapi.security import APIKeyHeader
 from typing import Any
 import garagedoor_service.door_controller as door_controller
 import garagedoor_service.tools.api_key as api_key_tools
+import garagedoor_service.tools.config as config
+import uvicorn
 
 app = FastAPI()
 
@@ -54,3 +56,13 @@ def readyz() -> Any:
 @app.get("/healthz")
 def healthz() -> Any:
     return {"result": "ok"}
+
+
+def main():
+    host = config.get_bind_host()
+    port = config.get_bind_port()
+    uvicorn.run("garagedoor_service.main:app", host=host, port=port, reload=False)
+    
+
+if __name__ == "__main__":
+    main()

@@ -1,9 +1,9 @@
 [project]
-name = "garagedoor-service"
+name = "garagedoor_service"
 version = "0.1.0"
 description = "Default template for PDM package" 
 authors = [
-    {name = "Dusty Lefevre", email = "nobody@localhost"},
+    {name = "Dusty Lefevre", email = "dusty.lefevre@gmail.com"},
 ]
 license = {file = "LICENSE"}
 readme = "README.md"
@@ -15,12 +15,14 @@ dependencies = [
     "bcrypt>=4.2.0",
 ]
 
+[project.scripts]
+garagedoor-service = "garagedoor_service.main:main"
 
 [tool.pdm]
-distribution = false
+distribution = true
 
 [tool.pdm.scripts]
-dev = "fastapi dev garagedoor_service/main.py"
+dev = "fastapi dev garagedoor_service/app.py"
 
 [tool.pdm.dev-dependencies]
 development = [

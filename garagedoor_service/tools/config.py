@@ -53,3 +53,19 @@ def get_closed_pin() -> int:
         int: The pin to read the door close state.
     """
     return __config["gpio"]["closed_pin"]
+
+
+def get_bind_host() -> str:
+    """Get the bind address from the configuration.
+    Returns:
+        str: The bind address.
+    """
+    return __config["bind"]["host"]
+
+
+def get_bind_port() -> int:
+    """Get the bind port from the configuration.
+    Returns:
+        int: The bind port.
+    """
+    return __config["bind"]["port"]
