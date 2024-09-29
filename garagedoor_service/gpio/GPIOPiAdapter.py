@@ -11,6 +11,11 @@ class GPIOPiAdapter(GPIOAdapter):
         GPIO.setup(self._doorPin, GPIO.OUT)
         GPIO.setup(self._doorOpenPin, GPIO.IN)
         GPIO.setup(self._doorClosePin, GPIO.IN)
+        
+        
+    def __del__(self):
+        from RPi import GPIO
+        GPIO.cleanup()
     
     
     def writeTogglePin(self, state: bool) -> None:
